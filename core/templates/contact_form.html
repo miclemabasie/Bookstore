@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Form{% endblock title %}
+
+{% block content %}
+<h1>{{title}}</h1>
+    <!-- <form action="" method="POST">
+        {% csrf_token %}
+        {{form_fbv.as_p}}
+        <input type="submit" value="Send Email">
+    </form> -->
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            {{form.name.label}}
+            <input type="text"
+            class="form-control {% if form.errors %}is-invalid{% endif %}"
+            id="id_name"
+            name="name"
+            placeholder="Your name"
+            value="{{ form.name.value|default:'' }}">
+            {% if form.errors %}
+                <div class="invalid-feedback">
+                    {{form.name.errors}}
+                </div>
+            {% endif %}
+            
+        </div>
+        <div class="form-group">
+            {{form.message.label}}
+            <textarea
+            class="form-control {% if form.errors %}is-invalid{% endif %}"
+            id="id_name"
+            name="message"
+            placeholder="Your message"
+            row='5'>
+            {{ form.message.value|default:'' }}
+            </textarea>
+            {% if form.errors %}
+                <div class="invalid-feedback">
+                    {{form.message.errors}}
+                </div>
+            {% endif %}
+            
+        </div>
+        <input type="submit" value="Send Email">
+    </form>
+{% endblock content %}

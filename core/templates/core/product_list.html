@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>This is the list of available products </h1>
+    <div class="row">
+        <div class="col-md-2 bg-dark white">
+            <p class="text-white">this is the navigation for the list view</p>
+            <p class="text-white"><a href="{% url 'core:product_list' 'all' %}">All</a></p>
+            <p class="text-white"><a href="{% url 'core:product_list' 'drama' %}">Drama</a></p>
+            <p class="text-white"><a href="{% url 'core:product_list' 'romance' %}">Romance</a></p>
+            <p class="text-white"><a href="{% url 'core:product_list' 'programming' %}">Programming</a></p>
+        </div>
+        <div class="col-md-10">
+            <p class="lead">Here are list of all products</p>
+            {% for product in page_obj %}
+              <p>{{product.name}}</p>
+              <p>
+                  <a href="{% url 'core:product_detail' product.slug %}">See it here</a>
+              </p>
+              {% if not forloop.last %}
+                <hr>
+              {% endif %}
+            {% endfor %}
+
+            <nav>
+                <ul class="pagination">
+                    {% if page_obj.has_previous %}
+                      <li class="page-item">
+                          <a href="?page={{page_obj.previous_page_number}}" class="page-link">Previous</a>
+                      </li>
+                    {% else %}
+                      <li class="page-item disabled">
+                          <a href="#" class="page-link">Previous</a>
+                      </li>
+                    {% endif %}
+
+                    {% for pagenum in page_obj.paginator.page_range %}
+                      <li 
+                        class="page-item {% if page_obj.number == pagenum %}active{% endif %}">
+                            <a href="?page={{pagenum}}" class="page-link">
+                                {{pagenum}}</a>                            
+                        </li>
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                        <li class="page-item">
+                            <a href="?page={{page_obj.next_page_number}}" class="page-link">Next</a>
+                        </li>
+                    {% else %}
+                        <div class="page-item disabled">
+                            <a href="#" class="page-link">Next</a>
+                        </div>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+{% endblock content %}

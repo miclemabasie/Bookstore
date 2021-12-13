@@ -1,0 +1,56 @@
+[
+{
+  "model": "core.producttag",
+  "fields": {
+    "name": "Romance",
+    "slug": "romance",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "core.producttag",
+  "fields": {
+    "name": "Drama",
+    "slug": "drama",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "core.producttag",
+  "fields": {
+    "name": "Science Fiction",
+    "slug": "science-fiction",
+    "description": "this is the description of this tag",
+    "active": true
+  }
+},
+{
+  "model": "core.producttag",
+  "fields": {
+    "name": "Opensource",
+    "slug": "opensource",
+    "description": "And yet another tag",
+    "active": true
+  }
+},
+{
+  "model": "core.producttag",
+  "fields": {
+    "name": "Teamwork",
+    "slug": "teamwork",
+    "description": "Just testing out the tag functionality",
+    "active": true
+  }
+},
+{
+  "model": "core.producttag",
+  "fields": {
+    "name": "Finance",
+    "slug": "finance",
+    "description": "",
+    "active": true
+  }
+}
+]

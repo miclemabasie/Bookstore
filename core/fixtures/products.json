@@ -1,0 +1,58 @@
+[
+{
+  "model": "core.product",
+  "pk": 1,
+  "fields": {
+    "name": "The power of ambition",
+    "description": "This book talks about the power behind will.",
+    "price": "200.00",
+    "slug": "the-power-ambition",
+    "active": true,
+    "in_stock": true,
+    "date_updated": "2021-11-29T05:10:22.792Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 2,
+  "fields": {
+    "name": "The cathedral and the Miclem",
+    "description": "This is a book of wisdom.",
+    "price": "200.00",
+    "slug": "power-ambition",
+    "active": true,
+    "in_stock": true,
+    "date_updated": "2021-11-29T05:10:22.792Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 3,
+  "fields": {
+    "name": "How to win friends and influence poeple",
+    "description": "This book talks about how to make the best out of poeple.",
+    "price": "200.00",
+    "slug": "the-power",
+    "active": true,
+    "in_stock": true,
+    "date_updated": "2021-11-29T05:10:22.792Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 4,
+  "fields": {
+    "name": "Pure Mathematics",
+    "description": "Indroducing mathematics from the modern beginning.",
+    "price": "200.00",
+    "slug": "the-ambition",
+    "active": true,
+    "in_stock": true,
+    "date_updated": "2021-11-29T05:10:22.792Z",
+    "tags": []
+  }
+}
+]
